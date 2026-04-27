@@ -91,11 +91,19 @@ function App() {
       type: "mobile",
       color: "linear-gradient(135deg, #0d2b3e, #1a1a2e)"
     },
-
+    {
+      id: 10,
+      name: "tic-tac-toe-game",
+      description: "A tic tac toe game with flutter",
+      tech: ["Flutter", "Dart"],
+      link: "https://github.com/rebehhalkoum93-cmyk/tic-tac-toe-x-o-",
+      type: "mobile",
+      color: "linear-gradient(135deg, #0d2b3e, #1a1a2e)"
+    },
   ]
 
-  const filteredProjects = activeFilter === 'all' 
-    ? allProjects 
+  const filteredProjects = activeFilter === 'all'
+    ? allProjects
     : allProjects.filter(p => p.type === activeFilter)
 
   const visibleProjects = filteredProjects
@@ -191,7 +199,7 @@ function App() {
         <div className="nav-logo">
           port<span>folio.</span>
         </div>
-        
+
         {/* Mobile Menu Toggle */}
         <button className="menu-toggle" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
           <div className="bar"></div>
